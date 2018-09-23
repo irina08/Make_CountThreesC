@@ -14,7 +14,7 @@
 # 	of this makefile
 
 # 'Count3s' is a target, which depends on existence of 
-# readInt32BitLE.c, CountThrees.c, readInt32BitLE.h files
+# readInt32BitLE.c, countThrees.c, readInt32BitLE.h files
 
 Count3s: 
 # This command will compile readInt32BitLE.c file and create
@@ -26,10 +26,10 @@ Count3s:
 # This command will compile CountThrees.c file and create object of 
 # this file. If it's failed it will produce error message on the screen 
 # and compilation will terminated.	
-	gcc -c CountThrees.c -o CountThreesC.o
+	gcc -c countThrees.c -o countThreesC.o
 
 # this command will obtain compiled executable file Count3s
-	gcc -o Count3s readInt32BitLE.o CountThreesC.o 
+	gcc -o Count3s readInt32BitLE.o countThreesC.o 
 	
 # 'runCount3s' is a target which depends on existence of
 # executable Count3s and threesData.bin
@@ -43,7 +43,7 @@ runCount3s: Count3s threesData.bin
 # the directory. If command 'make clean' is failed it will 
 # produce error message on the screen and compilation will terminated.
 clean: 
-	rm -rf Count3s readInt32BitLE.o CountThreesC.o
+	rm -rf Count3s readInt32BitLE.o countThreesC.o
 
 
 
